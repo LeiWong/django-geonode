@@ -1,0 +1,79 @@
+#mac 配置虚拟环境virtualenv
+
+##安装方法：
+安装virtualenv
+安装virtualenvwrapper
+安装Numpy，scipy，Matplotlib
+
+##安装virtualenv
+$ sudo pip install virtaulenv
+建立测试目录：
+
+mkdir testvirtual
+
+cd testvirtual
+创建虚拟环境：
+virtualenv env1
+
+
+#安装virtualenvwrapper
+vitualenvwrapper是virtualenv的扩展包，可以方便地新增，删除，复制，切换虚拟环境
+运行下面命令安装，默认安装在/usr/local/bin下面：
+sudo easy_install virtualenvwrapper
+接下来建立一个文件夹，存放所有的虚拟环境：
+mkdir ~/workspaces
+cd ~/workspaces
+在使用virtualenvwrapper之前，要运行virtualenvwrapper.sh文件，需要设置环境变量，把下列代码写入 ~/.bashrc里，如果没有~/.bahrc,需自己创建~/.bashrc//并写入以下代码：
+
+export WORKON_HOME=~/workspaces
+source /usr/bin/virtualenvwrapper.sh
+如果不能成功，可直接在命令行写入：
+
+$export WORKON_HOME=~/workspaces
+source /usr/local/bin/virtualenvwrapper.sh
+成功后，当前路径前就会有虚拟环境名
+
+
+##基本操作命令：
+1.列出虚拟环境：
+$ lsvirtualenv -b
+
+
+2.切换虚拟环境：
+workon env1
+
+3.查看虚拟环境安装的包：
+lssitepackages
+
+
+4.进入当前环境：
+
+$ cdvirtualenv
+
+5.进入当前环境的site-packages:
+$ cdsitepackages
+$ cdsitepacages pip
+
+6.复制虚拟环境：
+$ cpvirtualenv env1 env3
+
+7.退出虚拟环境：
+$deactivate
+
+
+## 安装numpy，scipy，matplotlib
+切换虚拟环境：
+workon env1
+
+安装包：
+
+pip isntall numpy
+pip install scipy
+pip install ipython
+pip install pandas
+pip install statsmodel
+pip install sciket-learn
+
+进入虚拟环境：
+cd ~/workspaces
+workon env1
