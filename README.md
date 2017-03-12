@@ -1,5 +1,4 @@
-# Djang
+# Django
+django project-geonode
 
-django project
-
-collecting django related project and code
+documents about gis framework geonode
