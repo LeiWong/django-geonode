@@ -164,7 +164,9 @@ class ExportViewSet(viewsets.ViewSet):
 ## django 运行celery
 ```
 python manage.py celery
+# 注意celery运行需保证每个app里面都有__init__.py文件
 ```
+
 
 
 
